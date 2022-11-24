@@ -3,6 +3,7 @@ import TelaLogin from "./components/TelaLogin/TelaLogin";
 import TelaCadastro from "./components/TelaCadastro/TelaCadastro";
 import TelaUsuarioCadastrado from "./components/TelaUsuarioCadastrado/TelaUsuarioCadastrado.js";
 import { useState } from "react";
+import TelaCadastroEndereco from "./components/TelaCadastroEndereco/TelaCadastroEndereco"
 
 const GlobalStyled = createGlobalStyle`
   *{
@@ -30,7 +31,11 @@ function App() {
       case 2:
         return <TelaCadastro mudarTela={mudarTela} />;
       case 3:
-        return <TelaUsuarioCadastrado />
+        return <TelaUsuarioCadastrado />;
+      case 4:
+        return <TelaCadastroEndereco mudarTela={mudarTela}/>;
+      default:
+        return alert("Algo de errado não está certo!")
     }
   }
 
